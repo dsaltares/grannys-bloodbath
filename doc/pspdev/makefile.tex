@@ -1,0 +1,29 @@
+El makefile para compilar proyectos para PSP tiene ciertas particularidades
+dignas de mención en esta humilde guía.\\
+
+Vamos a suponer que tenemos la siguiente jerarquía de directorios:
+
+\begin{verbatim}
+|- Proyecto
+    |- makefile
+    |- main.cpp
+    |- engine
+       |- ficheros.cpp
+       |- ficheros.h
+\end{verbatim}
+
+Nuestro makefile sería algo similar a lo siguiente:
+
+\lstinputlisting[style = consola]{makefile.txt}
+
+Podemos personalizar la apariencia de nuestro $homebrew$ en el menú de PSP
+mediante las siguientes variables:
+
+\begin{itemize}
+	\item \textbf{PSP\_EBOOT\_ICON}: icono de 144x80 que identificara al
+	juego en la sección $Juegos$ del menú.
+	\item \textbf{PSP\_EBOOT\_PIC1}: fondo que aparecerá en la consola cuando
+	el juego esté seleccionado, debe tener 480x272.
+	\item \textbf{PSP\_EBOOT\_SND0}: fichero de sonido en formato at3
+	que se escuchará cuando nuestro juego esté seleccionado en el menú.
+\end{itemize}

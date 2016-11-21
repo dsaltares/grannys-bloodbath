@@ -1,0 +1,562 @@
+
+\documentclass{beamer}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphics}
+\usepackage{listings}
+
+\usetheme{Berkeley}
+
+\title{Granny's Bloodbath\\Segunda presentación}
+\author{Manuel De la Calle\\Jose Marente\\David Saltares}
+\date{Abril de 2010}
+
+\useinnertheme[hoptionsi]{rounded}
+
+\setbeamertemplate{sidebar right}
+{
+  \hbox to2cm{\hss\insertlogo\hss}
+}
+
+\logo{\includegraphics[width=1.2cm]{logo.png}}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\frametitle{Índice de contenidos}
+	\tableofcontents
+\end{frame}
+
+\section{Introducción}
+
+\begin{frame}
+	\frametitle{¿De qué va Granny's Bloodbath?}
+	
+	\begin{block}{Historia}
+	La protagonista es una abuelita octogenaria que vive plácidamente en su casita situada en una agradable zona residencial. 
+	Todo iba de maravilla hasta que se ve invadida por terribles zombis
+	\end{block}
+	
+	\pause
+	
+	\begin{block}{Mecánica}
+		\begin{itemize}[<+->]
+			\item Plataformas de acción sorteando obstáculos y eliminando a todos los zombies que podamos
+			\item Munición y powerups (dentadura y pastillas para la tensión)
+			\item Ampliación de niveles por la comunidad
+		\end{itemize}
+	\end{block}
+	
+\end{frame}
+
+\section{Planificación}
+
+\begin{frame}
+	\frametitle{Planificación inicial}
+	
+	\includegraphics[scale=0.16]{planificacion_inicial.png}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Planificación actualizada}
+	
+	\includegraphics[scale=0.18]{planificacion_actualizada.png}
+	
+	Llevamos un ritmo aceptable. El proyecto avanza según lo previsto.
+\end{frame}
+
+\section{Modelado}
+
+\begin{frame}
+	\frametitle{Brainstorming}
+	
+	\begin{center}
+		\includegraphics[scale=1]{bombilla.png}
+	\end{center}
+	
+	\begin{block}{La lluvia de ideas alocadas}
+		\begin{itemize}[<+->]
+			\item Hablar de cómo queríamos que fuera el juego
+			\item Enumerar ideas sin pensarlas demasiado
+			\item Pensar en frío las ideas nombradas
+			\item Seleccionar las definitivas y retocarlas
+		\end{itemize}
+	\end{block}		
+\end{frame}
+
+\begin{frame}
+	\frametitle{Documento de requisitos y recursos necesarios}
+	
+	\begin{block}{Las cosas claras para trabajar bien}
+		\begin{itemize}[<+->]
+			\item Un documento que especificara claramente cómo queríamos que fuera el juego
+			\item Trataba de ser realista y no sobrepasar nuestras posibilidades
+			\item Nos evitaría confusiones futuras
+			\item Nos permitió saber desde el principio que recursos necesitaríamos:
+			\begin{itemize}[<+->]
+				\item Niveles
+				\item Personajes y objetos
+				\item Efectos de sonido
+				\item Músicas
+			\end{itemize}
+		\end{itemize}
+	\end{block}		
+\end{frame}
+
+\begin{frame}
+	\frametitle{Diagrama de clases}
+	
+	\includegraphics[scale=0.11]{clases.png}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Diagrama de estados de movimiento de la abuela}
+	
+	\begin{center}
+		\includegraphics[scale=0.22]{estados-abuela-movimiento.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Diagrama de estados de ataque de la abuela}
+	
+	\begin{center}
+		\includegraphics[scale=0.25]{estados-abuela-ataque.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Secuencia de escenas}
+	
+	El juego es facilmente ampliable modificando el fichero que contiene el guion.
+	
+	Tiene la siguiente estructura:
+	
+	\lstinputlisting[tabsize=2]{plot.xml}
+
+\end{frame}
+
+
+\section{Ingeniería y calidad}
+
+\begin{frame}
+	\frametitle{Diagrama de casos de uso}
+	
+	\begin{center}
+		\includegraphics[scale=0.25]{casos-uso.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Caso de uso: Jugar nivel}
+	
+	\begin{description}
+		\item[Caso de uso:] Jugar nivel
+		\item[Descripción:] El jugador mueve al personaje por el nivel hasta que acaba
+		\item[Actor:] Jugador
+		\item[Precondiciones:] El sistema está inicializado
+		\item[Postcondiciones:] El jugador ha terminado el nivel
+	\end{description}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Caso de uso: Jugar nivel}
+	
+	\begin{description}
+		\item[Caso de uso:] Jugar nivel
+		\item[Descripción:] El jugador mueve al personaje por el nivel hasta que acaba
+		\item[Actor:] Jugador
+		\item[Precondiciones:] El sistema está inicializado
+		\item[Postcondiciones:] El jugador ha terminado el nivel
+	\end{description}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Caso de uso: Jugar nivel}
+	
+	\begin{description}
+		\item[Escenario principal]:
+		\begin{enumerate}
+			\item El jugador desea jugar un nivel
+			\item El sistema carga el nivel, el escenario y los actores
+			\item El jugador mueve al personaje. \textbf{Include Mover jugador}
+			\item El sistema mueve a los enemigos.
+			\item El sistema gestiona las colisiones. \textbf{Include Gestionar colisiones}
+			\item El sistema comprueba que el personaje sigue con vida
+			\item El sistema muestra la escena en pantalla
+			\item El sistema valida que no se ha llegado al final del nivel y volvemos al paso \textbf{3}
+		\end{enumerate}
+	\end{description}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Caso de uso: Jugar nivel}
+	
+	\begin{description}
+		\item[Escenarios alternativos]:
+		\begin{itemize}
+			\item \textbf{3-8a} El jugador pausa el juego
+			\begin{enumerate}
+				\item El sistema muestra el menu
+			\end{enumerate}
+			\item \textbf{6a} El personaje ha muerto
+			\begin{enumerate}
+				\item El sistema valida que el personaje tiene vidas restantes
+				\item El sistema reinicia el nivel
+			\end{enumerate}
+			\item \textbf{6a1a} El personaje no tiene vidas restantes
+				\begin{enumerate}
+					\item El sistema muestra la pantalla de `Game Over'
+				\end{enumerate}
+		\end{itemize}
+	\end{description}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Caso de uso: Gestionar colisiones}
+	
+	\begin{description}
+		\item[Caso de uso:] Gestionar colisiones
+		\item[Descripción:] Se detectan y dan respuesta a las colisiones del mundo
+		\item[Actor:] Jugador
+		\item[Precondiciones:] Se está jugando un nivel
+		\item[Postcondiciones:] Las colisiones se detectan
+		\item[Nivel:] Subfunción
+	\end{description}		
+\end{frame}
+
+\begin{frame}
+	\frametitle{Caso de uso: Gestionar colisiones}
+	
+	\begin{description}
+		\item[Escenario principal]:
+		\begin{enumerate}
+			\item El sistema valida que no hay colisiones personaje-enemigo
+			\item El sistema valida que no hay colisiones personaje-escenario
+			\item El sistema valida que no hay colisiones enemigo-escenario
+			\item El sistema valida que no hay colisiones bala-personaje
+			\item El sistema valida que no hay colisiones bala-enemigo
+			\item El sistema valida que no hay colisiones personaje-objeto
+		\end{enumerate}
+	\end{description}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Caso de uso: Gestionar colisiones}
+	
+	\begin{description}
+		\item[Escenarios alternativos]:
+		\begin{itemize}
+			\item \textbf{1a} Colisión personaje-enemigo
+			\begin{enumerate}
+				\item El personaje ataca al enemigo y el enemigo muere
+			\end{enumerate}
+			\begin{itemize}
+				\item \textbf{1a} El personaje no ataca y se le resta vida
+			\end{itemize}
+			\item \textbf{2a} Colisión personaje-escenario
+			\begin{enumerate}
+				\item Se corrige la posición del personaje
+			\end{enumerate}
+			\item \textbf{3a} Colisión enemigo-escenario
+			\begin{enumerate}
+				\item Se corrige la posición del enemigo
+			\end{enumerate}
+			\item \textbf{4a} Colisión bala-personaje
+			\begin{enumerate}
+				\item Se le resta energía al personaje
+			\end{enumerate}
+			\item \textbf{5a} Colisión bala-enemigo
+			\begin{enumerate}
+				\item El enemigo muere
+			\end{enumerate}
+		\end{itemize}
+	\end{description}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Caso de uso: Gestionar colisiones}
+	
+	\begin{description}
+		\item[Escenarios alternativos]:
+		\begin{itemize}
+			\item \textbf{6a} Colisión personaje-objeto
+			\begin{enumerate}
+				\item El objeto es una dentadura y aumentan los puntos del personaje
+			\end{enumerate}
+			\begin{itemize}
+				\item \textbf{1a} El objeto es un bote de pastillas y aumenta la energía del personaje
+				\item \textbf{1b} El objeto es munición y aumentan las balas del personaje
+			\end{itemize}
+		\end{itemize}
+	\end{description}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Separando los datos del código}
+	
+	En todo momento hemos intentado separar el código fuente de los datos de personajes, niveles y escenas.
+	
+	\pause
+	
+	\begin{block}{Ventajas}
+		\begin{itemize}[<+->]
+			\item No hay que recompilar para cambiar ajustes en la jugabilidad (velocidad de personajes, daño de enemigos...)
+			\item No hay que saber programar para hacer ajustes sobre dichos parámetros (los diseñadores pueden hacer su trabajo)
+			\item El usuario final puede añadir sus propios niveles
+		\end{itemize}
+	\end{block}
+	
+	\pause
+	
+	\begin{block}{Solución}
+		\begin{itemize}[<+->]
+			\item Todo se lee de ficheros XML
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Algoritmo general}
+
+\begin{frame}
+	\frametitle{Algoritmo de Application}
+	
+	\begin{center}
+		\includegraphics[scale=0.23]{flujo.png}
+	\end{center}
+\end{frame}
+
+\section{Arte y diseño}
+
+\begin{frame}
+	\frametitle{La abuelita}
+	
+	Una viuda que quería pasar el resto de sus días en una casa de un barrio residencial. Su descanso se ve interrumpido por una invasión zombie.
+	Coge la escopeta de su difunto marido y sale a arrastrar a tantos como pueda con ella al infierno.\\
+	
+	Aporta el tono humorístico al juego.
+	
+	\begin{columns}[t]
+		\column{.5\textwidth}
+			\begin{block}{Características y habilidades}
+				\begin{itemize}
+					\item Desplazarse
+					\item Disparar escopeta
+					\item Golpe de bastón
+					\item Agacharse	
+					\item Saltar	
+				\end{itemize}
+			\end{block}
+		\column{.5\textwidth}
+			\begin{block}{La bestia en cuestión}
+				\includegraphics[scale=0.3]{abuela-normal.png}
+				\includegraphics[scale=0.3]{abuela-golpe.png}
+				\includegraphics[scale=0.3]{abuela-agachada.png}
+				\includegraphics[scale=0.3]{abuela-salto.png}
+			\end{block}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{La horda}
+	
+	Existen 3 tipos de zombie aunque sólo tenemos diseñados completamente 2 de ellos. El último nos lo reservamos para el futuro.
+	
+	\begin{columns}[t]
+		\column{.5\textwidth}
+			\begin{block}{Características y habilidades}
+				\begin{itemize}
+					\item \emph{Zombie genérico:} El enemigo básico, persigue tonta y lentamente a la abuela.
+					\item \emph{Doberman rabioso:} Inspirado en la saga Resident Evil, pone nervioso a cualquiera.
+				\end{itemize}
+			\end{block}
+		\column{.5\textwidth}
+			\begin{block}{Los enemigos}
+				\begin{center}
+				\includegraphics[scale=0.5]{zombie.png}
+				
+				\includegraphics[scale=0.5]{perro.png}
+				\end{center}
+			\end{block}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Los preciados items}
+	
+	También habrá 3 tipos de items aunque sólo tenemos terminados 2 de ellos (calma, aún queda tiempo hasta junio).
+	
+	\begin{columns}[t]
+		\column{.5\textwidth}
+			\begin{block}{Características}
+				\begin{itemize}
+					\item \emph{Dentadura postiza:} ¿Qué haría una abuela sin ella? Nos darán puntos.
+					\item \emph{Pastillas para la tensión:} Imprescindibles para sobrevivir, restauran nuestra energía.
+				\end{itemize}
+			\end{block}
+		\column{.5\textwidth}
+			\begin{block}{Los tesoros}
+				\begin{center}
+				\includegraphics[scale=0.5]{dentadura.png}
+				
+				\includegraphics[scale=0.5]{pastillas.png}
+				\end{center}
+			\end{block}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Los escenarios}
+	
+	Hemos previsto crear 2 escenarios y tenemos diseñado uno de ellos, la casa de la abuelita.\\
+	
+	Podéis ver algunas capturas de un posible resultado:
+	
+	\begin{center}
+	\includegraphics[scale=0.3]{casa-abuela-1.png}
+	
+	\pause
+	
+	\includegraphics[scale=0.3]{casa-abuela-2.png}
+	
+	\pause
+	
+	\includegraphics[scale=0.3]{casa-abuela-3.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Música, narrador y efectos}
+	
+	\begin{block}{Banda sonora}
+		\begin{itemize}[<+->]
+			\item Música obtenida de Jamendo
+			\item Estilo 8-bit, retro
+			\item Autores: Fremito y Ozzed
+		\end{itemize}
+	\end{block}
+	
+	 \pause
+	
+	\begin{block}{Narrador}
+		\begin{itemize}[<+->]
+			\item Nuestras voces narran la historia del juego
+			\item Cuentan con una distorsión estilo Saw
+		\end{itemize}
+	\end{block}
+	
+	\pause
+	
+	\begin{block}{Efectos}
+		\begin{itemize}[<+->]
+			\item Efectos como: bastonazo, disparo, golpes etc.
+			\item Obtenidos de varias fuentes (indicadas en los créditos).
+		\end{itemize}
+	\end{block}
+	
+\end{frame}
+
+\section{Metodología}
+
+\begin{frame}
+	\frametitle{Forja}
+	
+	\begin{center}
+		\includegraphics[scale=0.24]{lines-of-code.png}
+	\end{center}
+	
+	\begin{block}{Commits}
+		\begin{itemize}[<+->]
+			\item Un commit por cada cambio realizado (nunca cambiar varias cosas y mandarlas juntas)
+			\item Comentarios indicativos de los cambios
+			\item Casi 90 aportaciones a la forja hasta la fecha
+		\end{itemize}	
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Documentación y listas de correo}
+
+	\begin{block}{Documentación con Doxygen}
+		\begin{itemize}[<+->]
+			\item Imprescindible que el autor de un módulo escriba la documentación a la vez que desarrolla
+			\item Todos los elementos públicos documentados
+			\item Ejemplo de uso de cada módulo
+		\end{itemize}	
+	\end{block}
+	
+	\pause
+	
+	\begin{block}{Listas de correo}
+		\begin{itemize}[<+->]
+			\item Reparto de tareas
+			\item Organización
+			\item Dudas
+		\end{itemize}	
+	\end{block}
+
+\end{frame}
+
+\section{Herramientas}
+
+\begin{frame}
+	\frametitle{Herramientas utilizadas}
+	\begin{itemize}
+		\item \emph{Planner:} planificación
+		\item \emph{DIA:} editor de diagramas
+		\item \emph{Latex junto con Beamer:} presentación
+		\item \emph{Blog} (Wordpress): cara pública del proyecto
+		\item \emph{Subversion:} control de versiones
+		\item \emph{Doxygen:} documentación del código
+		\item \emph{Flash:} animaciones
+		\item \emph{Imagemagic:} montaje de animaciones
+		\item \emph{The Gimp:} grafismo
+		\item \emph{Tiled:} editor de escenarios
+		\item \emph{Audacity:} grabación y edición de sonido
+	\end{itemize}	
+\end{frame}
+
+\section{El blog}
+
+\begin{frame}
+	\frametitle{Una herramienta para ganar visibilidad}
+	
+	http://grannysbloodbath.wordpress.com
+	
+	\begin{center}
+		\includegraphics[scale=0.32]{blog.png}
+	\end{center}
+	
+	Publicamos datos sobre nuestro proyecto: avances, dificultades, soluciones etc.
+	
+	\pause
+	
+	\begin{block}{Algunos datos}
+		\begin{itemize}[<+->]
+			\item 412 visitas
+			\item 20 entradas
+		\end{itemize}	
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fin de la presentación}
+	
+	Muchas gracias por vuestra atención, seguiremos en la próxima presentación.
+\end{frame}
+
+\end{document}

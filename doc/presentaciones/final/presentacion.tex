@@ -1,0 +1,442 @@
+
+\documentclass{beamer}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphics}
+\usepackage{listings}
+
+\usetheme{Berkeley}
+
+\title{Granny's Bloodbath\\Presentación final}
+\author{Manuel De la Calle\\Jose Marente\\David Saltares}
+\date{Julio de 2010}
+
+\useinnertheme[hoptionsi]{rounded}
+
+\setbeamertemplate{sidebar right}
+{
+  \hbox to2cm{\hss\insertlogo\hss}
+}
+
+\logo{\includegraphics[width=1.2cm]{images/logo.png}}
+
+\AtBeginSection[] {
+  \begin{frame}[plain]
+    \frametitle{Übersicht}
+    \tableofcontents[currentsection]
+  \end{frame}
+  \addtocounter{framenumber}{-1}
+
+} 
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\frametitle{Índice de contenidos}
+	\tableofcontents
+\end{frame}
+
+\section{Cambios}
+
+\begin{frame}
+	\frametitle{¿Qué ha cambiado desde la última vez?}
+	
+	\begin{center}
+		\includegraphics[scale=0.22]{images/boss.png}
+	\end{center}
+	
+	\begin{center}
+	Desde la última presentación ha llovido bastante...
+	\end{center}
+	
+	\begin{block}{Cambios}
+		\begin{itemize}
+			\item Nuevos enemigos
+			\item Niveles que completan la historia
+			\item Arte para escenas nuevas
+			\item Intento de crear una versión Mac
+			\item Port para PSP (beta)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Documentación}
+
+\begin{frame}
+	\frametitle{Manual de usuario}
+	
+	\begin{center}
+		\includegraphics[scale=0.16]{images/question.jpg}
+	\end{center}
+	
+	\begin{center}
+		Se ha creado un completo manual de usuario que cubre:
+	\end{center}
+	
+	\begin{block}{Manual de usuario}
+		\begin{itemize}
+			\item Instalación en Windows y GNU/Linux
+			\item Controles
+			\item Personajes
+			\item Historia
+			\item Soporte y contacto
+			\item Créditos (mencionando a autores externos)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Documentación con Doxygen}
+	
+	\begin{center}
+		\includegraphics[scale=0.16]{images/doxygen_logo.png}
+	\end{center}
+	
+	Se ha completado la documentación en Doxygen con el nuevo código
+	
+	\begin{block}{Doxygen}
+		\begin{itemize}
+			\item Documentación de todos los métodos
+			\item Ejemplos de uso
+			\item Diagramas de colaboración
+			\item Accesible desde http://grannybloodbath.forja.rediris.es/
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Portar juegos en C++ con SDL de PC a PSP}
+	
+	\begin{center}
+		\includegraphics[scale=0.4]{images/portpsp.png}
+	\end{center}
+	
+	
+	\begin{block}{Contenido del tutorial}
+		\begin{itemize}
+			\item Instalación del SDK en sistemas Debian
+			\item Makefile
+			\item Callbacks de salida al Firmware
+			\item Particularidades de la pantalla
+			\item Leer la entrada utilizando el SDK
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Créditos}
+
+\begin{frame}
+	\frametitle{Reparto final de tareas}
+	
+	\begin{center}
+		Veamos desde Planner, cómo ha quedado el reparto de tareas
+	\end{center}
+	
+\end{frame}
+
+\section{Forja}
+
+\begin{frame}
+	\frametitle{El trabajo en RedIris}
+	
+	\begin{center}
+		\includegraphics[scale=0.4]{images/rediris.png}
+	\end{center}
+	
+	
+	\begin{block}{Trabajo en la forja}
+		\begin{itemize}
+			\item Publicación de ficheros (releases, manuales...)
+			\item Bug-Tracking
+			\item Listas de correo
+			\item Noticia de lanzamiento
+		\end{itemize}
+	\end{block}
+	
+	\begin{alertblock}{Atención}
+		\begin{itemize}
+			\item Actividad entre el 80\% y el 100\%
+			\item Más de 130 descargas
+			\item 265 commits
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\section{Visibilidad}
+
+\begin{frame}
+	\frametitle{El blog}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/blog.png}
+	\end{center}
+	
+	\begin{block}{Cifras}
+		\begin{itemize}
+			\item Más de 1300 visitas
+			\item 41 artículos
+			\item De los blogs de Wordpress más activos en SDL (junto con Space Penguin)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tuenti}
+	
+	\begin{center}
+		\includegraphics[scale=0.1]{images/tuenti.jpeg}
+	\end{center}
+	
+	\begin{center}
+		Si hay cientos de páginas sin sentido, ¿por qué Granny's Bloodbath no iba a tener la suya?
+	\end{center}
+	
+	\begin{block}{Datos}
+		\begin{itemize}
+			\item 130 seguidores
+			\item Varios accesos al blog
+			\item Comentarios
+			\item Descargas
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Demostración}
+
+\begin{frame}
+	\frametitle{Granny's Bloodbath en funcionamiento}
+	
+	\begin{center}
+		\includegraphics[scale=0.2]{images/menu.png}
+	\end{center}
+	
+	\begin{center}
+		Veamos realmente en qué ha quedado todo esto
+	\end{center}
+\end{frame}
+
+\section{Arte}
+
+\begin{frame}
+	\frametitle{Grafismo}
+	
+	\begin{center}
+		\includegraphics[scale=0.14]{images/boss-sprite.png}
+	\end{center}
+	
+	\begin{center}
+		Todo el grafismo ha sido de elaboración propia
+	\end{center}
+	
+	\begin{block}{Datos}
+		\begin{itemize}
+			\item 12 Sprites
+			\item 7 Fondos de escena (historia, menús...)
+			\item 2 Tilesets
+			\item Elementos del HUD
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sonido}
+	
+	\begin{center}
+		\includegraphics[scale=0.12]{images/audacity.jpg}
+	\end{center}
+	
+	\begin{block}{Elaboración propia}
+		\begin{itemize}
+			\item Narrador
+			\item Sonidos de zombies
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{Recursos externos}
+		\begin{itemize}
+			\item Abuela (Ainhoa Martínez Góngora)
+			\item Otros efectos (bancos de sonidos libres)
+			\item BSO (Fremito y Ozzed en Jamendo)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Ampliación}
+
+\begin{frame}
+	\frametitle{Posibilidades}
+	
+	\begin{center}
+		\includegraphics[scale=0.12]{images/tiled.png}
+	\end{center}
+	
+	\begin{block}{¿Futuro?}
+		\begin{itemize}
+			\item Crear un nivel desde 0 o con la plantilla
+			\item Escenas de historia sin tocar código
+			\item Enemigos nuevos creando una clase correspondiente
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Dificultades}
+
+\begin{frame}
+	\frametitle{Motor de colisiones}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/colisiones.png}
+	\end{center}
+	
+	\begin{center}
+		De lo más complicado en un juego de plataformas
+	\end{center}
+	
+	\begin{block}{Las pegas}
+		\begin{itemize}
+			\item Querer hacerlo demasiado preciso, es mejor el engaño
+			\item Imposible controlar el uso que se haga del editor
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{A pesar de todo}
+		\begin{itemize}
+			\item Responde correctamente
+			\item Es bastante flexible
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Manejo de escenas}
+	
+	\begin{center}
+		\includegraphics[scale=0.07]{images/fondo-intro.png}
+		\includegraphics[scale=0.07]{images/escena-barrio.png}
+		\includegraphics[scale=0.07]{images/escena-boss.png}
+	\end{center}
+	
+	\begin{block}{Los problemas}
+		\begin{itemize}
+			\item Querer que se ampliara con libertad y facilidad
+			\item Totalmente externo al código fuente
+			\item Manejo responsable de la memoria
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{La solución}
+		\begin{itemize}
+			\item SceneMngr (tratamiento uniforme para los tipos de escenas)
+			\item Memoria dinámica (sólo los elementos necesarios)
+			\item Ficheros XML
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Enemigos}
+	
+	\begin{center}
+		\includegraphics[scale=0.17]{images/spider.png}
+	\end{center}
+	
+	\begin{block}{Los problemas}
+		\begin{itemize}
+			\item Querer zombies tontos hasta cierto punto
+			\item Buscar presentar un reto al jugador
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{La solución}
+		\begin{itemize}
+			\item Los zombies pueden acceder a su entorno (colisiones, otros actores)
+			\item Creación de enemigos para presentar retos jugables
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Port a PSP}
+	
+	\begin{center}
+		\includegraphics[scale=0.12]{images/portpsp.png}
+	\end{center}
+	
+	\begin{block}{Los problemas}
+		\begin{itemize}
+			\item SDL soportada al 90\%
+			\item Escasez de documentación
+			\item Librerías no oficiales
+			\item Memoria y procesador limitados
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{La solución}
+		\begin{itemize}
+			\item Creación de documentación :D
+			\item Uso transparente del SDK en ocasiones
+			\item Estamos trabajando en ello :(...
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Versión para Mac}
+	
+	\begin{center}
+		\includegraphics[scale=0.05]{images/apple.png}
+	\end{center}
+	
+	\begin{block}{Los problemas}
+		\begin{itemize}
+			\item Mucha dificultad para compilar SDL desde 0
+			\item Prácticamente nada de documentación
+			\item Casi obligación de usar XCode (IDE)
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		Sería genial que alguien lo consiguiera y lo documentara
+	\end{center}
+\end{frame}
+
+\section{Estadísticas}
+
+\begin{frame}
+	\frametitle{Gource + StatSVN}
+	
+	\begin{center}
+		Un vistazo rápido a los informes de Gource y StatSVN
+	\end{center}
+	
+	\begin{center}
+		Sí, nos ha gustado mucho Gource :D
+	\end{center}
+	
+\end{frame}
+
+\section{Preguntas}
+
+\begin{frame}
+	\frametitle{¿Alguna pregunta?}
+	
+	\begin{center}
+		\includegraphics[scale=0.2]{images/question-mark.jpg}
+	\end{center}
+	
+	\begin{center}
+		\huge{¡Muchas gracias!}
+	\end{center}
+	
+	\begin{center}
+		¿Alguna pregunta?
+	\end{center}
+	
+\end{frame}
+
+\end{document}

@@ -1,0 +1,33 @@
+<fat code="gordo" vx="1" vy="22" energy="3" force="4" attackdelay="10" shootdelay="25" >
+	<animations>
+		<animation name="normal" frames="0" delay="1"/>
+		<animation name="jump" frames="0" delay="1"/>
+		<animation name="move" frames="0,1,2,3,4,5,6,7,8,9,10,12,,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59" delay="1"/>
+		<animation name="attack" frames = "59,60,61,62,63,64,65,66,67,68,69,70,71,72,73" delay="1"/>
+		<animation name="rise" frames = "74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89" delay="1"/>
+		<animation name="damage" frames="89,90,91,92,93,94,95,96,97,98,99,100,102,103,104" delay="1"/>
+		<animation name="die" frames="89,90,91,92,93,94,95,96,97,98,99,100,102,103,104,103,102,101,100,99,98,97" delay="1"/>
+	</animations>
+	<collisions>
+		<collision state="normal" x="40" y="33" w="80" h="147" />
+		<collision state="jump" x="40" y="33" w="80" h="147" />
+		<collision state="move" x="40" y="33" w="80" h="147" />
+		<collision state="attack" x="40" y="33" w="80" h="147" />
+		<collision state="rise" x="40" y="33" w="80" h="147" />
+		<collision state="damage" x="40" y="33" w="80" h="147" />
+		<collision state="die" x="40" y="33" w="80" h="147" />
+	</collisions>
+	<dimensions>
+		<dimension state="normal" x="40" y="33" w="80" h="147" />
+		<dimension state="jump" x="40" y="33" w="80" h="147" />
+		<dimension state="move" x="40" y="33" w="80" h="147" />
+		<dimension state="attack" x="40" y="33" w="80" h="147" />
+		<dimension state="rise" x="40" y="33" w="80" h="147" />
+		<dimension state="damage" x="40" y="33" w="80" h="147" />
+		<dimension state="die" x="40" y="33" w="80" h="147" />
+	</dimensions>
+	<sounds>
+		<sound situation="attack" code="vomit" />
+		<sound situation="hurt" code="hurt_fat" />
+	</sounds>
+</fat>

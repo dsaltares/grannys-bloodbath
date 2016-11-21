@@ -1,0 +1,149 @@
+\documentclass[titlepage]{article}
+
+\usepackage[utf8]{inputenc} % Codificación
+\usepackage[spanish]{babel} % Español
+\usepackage{graphicx} % Para incluir imágenes
+
+\author{Manuel de la Calle Brihuega\\Jose Marente Florín\\David Saltares Márquez}
+\title{Diseño preliminar y recursos necesarios de Granny's Bloodbath}
+
+\begin{document}
+
+\maketitle
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+
+\section{Introducción}
+A lo largo de este documento pretendemos establecer todos los detalles relacionados con nuestro videojuego \emph{Granny's Bloodbath}. Concretaremos en profundidad elementos como la historia, mecánica de juego, personajes, enemigos, objetos, habilidades etc. De esta manera obtendremos una serie de requisitos a implementar y todo el arte a producir. Sea el objetivo ayudarnos a organizar y facilitar el desarrollo del proyecto.\\
+
+\section{Historia}
+La protagonista es una abuelita octogenaria que vive plácidamente en su casita situada en una agradable zona residencial. Todo iba de maravilla hasta que se ve invadida por terribles zombis. Es entonces cuando, lo que parecía una inocente y respetable abuela (como la que podemos tener todos nosotros), decide arrastrar con ella a todos los engendros que pueda de camino al infierno. ¿Será nuestra abuelita un digno rival para el apocalipsis que se presenta?.\\
+
+Una historia sencilla pero con unos motivos bien fundamentados a sus espaldas. Tenemos algo que hace las veces tanto de parodia como de tributo al mundo de la serie B en general y al de los zombis en particular. Con un aire a largometrajes recientes como \emph{Zombieland} o \emph{Shaun of the Dead} pretendemos divertir al jugador aficionado al género.
+
+\section{Jugabilidad}
+Granny's Bloodbath es un juego de acción y plataformas con desarrollo bidimensional. Al contrario que en otros juegos como los de la saga Mario, no eliminamos a los enemigos saltando sobre ellos sino que tenemos que utilizar armas. Avanzamos por el escenario lateralmente saltando sobre diversas plataformas y eliminando a los zombies. El usuario debe mostrar habilidad para no caer al vacío a la vez que elimina a los numerosos enemigos. Pretendemos darle un ambiente cómico y frenético al mismo tiempo.\\
+
+A la vez que acabamos con todo bicho `no viviente' tenemos que ir recogiendo objetos como las dentaduras postizas para ganar puntos y las pastillas para la tensión si queremos reestablecer nuestra energía. El jugador no sólo tendrá que sobrevivir a la invasión con éxito sino que el hecho de conseguir puntos le da un toque de competitividad. Pueden retarse entre compañeros.
+
+\section{Personajes}
+En esta sección describiremos a los personajes que intervienen en la sanguinaria aventura. Serán detalladas sus habilidades, comportamiento y su apariencia física:
+
+\subsection{La abuelita}
+Físicamente se nota que es una persona mayor, de apariencia indefensa pero con cara de enfado (es lógico teniendo en cuenta que ha sido invadida por zombis). Su pelo será blanco, recogido en un moño, tendrá la espalda algo jorobada y tanto brazos como piernas bastante huesudos. Para hacer más evidente su edad le pondremos un bastón. La paz de su merecida jubilación se va al traste por culpa de los zombis, no le ha dado tiempo a nada, así que sigue en bata, camisón y zapatillas de estar por casa. El contraste entre la aparición de su carácter violento y su engañosa debilidad le dan el toque de humor a la aventura.\\
+
+La abuela es capaz de desplazarse con normalidad aunque también puede saltar y agacharse. El salto debe ser exagerado para su complexión (mostrando la delgadez de sus piernas) lo que puede hacer el juego más dinámico, divertido y gracioso. Su ataque básico para defenderse es el bastonazo el cual posee munición ilimitada. Más adelante podrá equiparse con armas de fuego que vaya encontrando en los escenarios como la escopeta.
+
+\subsection{Enemigos}
+Con el objetivo de no aburrir al jugador contamos con varios tipos de enemigos. Cada uno presenta habilidades y comportamientos distintos por lo que el jugador se ve obligado a cambiar su manera de enfocar la acción para hacer frente al nuevo desafío. Entrarán en escena escalonadamente, conforme avance la aventura, de manera que, el sujeto sienta que progresa y mejora.
+
+\subsubsection{Zombie genérico}
+El zombie básico, camisa rota, le falta un zapato, pantalones raídos. Lo único que hace es avanzar hacia la abuelita, si se pasa de largo se dará la vuelta para volver a seguirla. Lo único que puede hacer es andar a una baja velocidad e inflinge daño cuando toca a la abuela. Conseguimos una cantidad pequeña de puntos al eliminarlo.
+
+\subsubsection{Perro asesino} 
+Una especie de doberman demacrado con parte del costillar al aire. Es mucho más veloz y letal que el zombie genérico aunque su comportamiento es similar. Lo único que hace es correr como el diablo. Conseguimos una cantidad mediana de puntos al eliminarlo.
+
+\subsubsection{Zombie gordo}
+En vida se daba unos atracones de donuts, en la no vida pretende hacer lo mismo con las vísceras de la abuela. Zombie muy gordo, sin cuello, con papada y una gran barriga. Avanza muy lentamente, puede hacer daño por contacto pero cuenta con un ataque a distancia de vómito. Conseguimos una gran cantidad de puntos al eliminarlo.
+
+\section{Objetos}
+
+\subsection{Dentadura postiza}
+Para poder sobrevivir a su gran odisea, la abuelita debe recoger sus dentaduras postizas, ¿qué haría sin ellas? Al recogerlas se nos conceden puntos. Su localización será sitios parcialmente inaccesibles para que el reto sea aún mayor aunque alguna habrá al alcance de la mano. Aparecerán medio flotando en el escenario y girando.
+
+\subsection{Pastillas para la tensión}
+Cuando los zombies nos atacan perdemos vida, la única manera de recuperarla es recolectando estas pastillas. Aparecerán medio flotando en el escenario y girando.
+
+\subsection{Munición de escopeta}
+Al comienzo sólo disponemos del bastón, más adelante encontraremos la escopeta y su munición. Si no tenemos la escopeta y recogemos el ítem tendremos el arma y un poco de munición. Si recogemos de nuevo el objeto se nos sumará munición. Se representa como un icono de escopeta.
+
+\section{Niveles}
+
+\subsection{La casa de la abuelita}
+Como hemos mencionado anteriormente, la abuelita vivía plácidamente en una casa de un barrio residencial. Este feo asunto de la invasión le pilla por sorpresa y no puede hacer otra cosa que plantarles cara en bata. El primer nivel de la aventura es el interior de su casa, no pretende tener un enfoque realista por lo que avanzaremos subiendo por estanterías y mesas a lo largo de las estancias. 
+
+\subsection{El barrio residencial}
+El siguiente nivel será el exterior de la casa, el barrio residencial. Un barrio típico americano ahora destrozado, casas parcialmente destruidas, coches volcados, cadáveres etc.
+
+\subsection{Posibles ampliaciones}
+Por cuestiones de tiempo estimamos que no será posible crear más escenarios para el juego. No obstante, nuestra intención es proporcionar al usuario un manual y las herramientas pertinentes para que, sin conocimientos técnicos de programación, pueda crear nuevos niveles. Otro incentivo más para el jugador y la comunidad, ampliar los contenidos iniciales.
+
+\section{Escenas}
+\subsection{Menú principal}
+Es la pantalla de bienvenida, desde la que se pueden acceder a las distintas secciones. Como opciones tiene `Jugar', `Créditos' y `Salir'. Debe tener un cursor, un fondo, los textos de las opciones y una música relajada. 
+
+\subsection{Pantalla de juego}
+En la pantalla de juego veremos a la abuela, los enemigos y el escenario. Cada nivel tendrá una música y tenemos que poder visualizar el HUD de la protagonosta. El HUD debe mostrar la vida y los puntos acumulados.
+
+\subsection{Historia}
+Entre niveles se cuenta la historia del personaje, esto servira de nexo para darle consistencia al argumento del juego. Aunque las premisas sean sencillas queremos conseguir que el jugador tenga un objetivo, hacer sentirle que avanza por una trama, no es nuestra intención presentarle niveles sin sentido. Veremos una escena representativa de lo que se cuente, un texto y una voz en off que lea lo que aparece en pantalla.
+
+\subsection{Créditos}
+En los créditos aparecerá el nombre de los desarrolladores y menciones a las fuentes de recursos que hayamos utilizado (efectos de sonido, música, etc).
+
+\section{Recursos necesarios}
+Tras haber hecho una recopilación de lo que queríamos para \emph{Granny's Bloodbath} pasamos a deducir los recursos tanto gráficos como de sonido para el juego. No nos referiremos a requisitos del motor, simplemente al arte.
+
+\subsection{Grafismo}
+
+\subsubsection{Personajes y objetos}
+\begin{itemize}
+	\item \emph{Abuela}: sprite que represente a la abuela tal y como se describió, con animaciones capaces de reflejar todas sus habilidades y estados. Andar, agacharse, saltar, golpear, ser golpeada morir.
+	\item \emph{Zombie genérico}: el sprite para este zombie sólo tendrá las animaciones de andar, ser golpeado y morir.
+	\item \emph{Perro asesino}: este sprite de doberman zombificado debe tener las animaciones de correr, serl golpeado y morir.
+	\item \emph{Zombie Gordo}: el zombie gordo tiene que poder andar, ser golpeado, morir y vomitar (sí, es asqueroso).
+	\item \emph{Dentadura postiza}: la dentadura postiza estará rotando sobre su eje central en el escenario. Debe tener algunos frames a diferentes altura para que parezca que sube y baja desde distintos ángulos.
+	\item \emph{Pastillas para la tensión}: al igual que la dentadura, el bote de pastillas para la tensión estará rotando y subiendo y bajando.
+	\item \emph{Munición de escopeta}: estará representado por una escopeta rotando, al igual que las pastillas y la dentadura.
+\end{itemize}
+
+\subsubsection{Niveles}
+\begin{itemize}
+	\item \emph{La casa de la abuelita}: este nivel representa el interior de la casa, el tileset correspondiente debe contar con todo tipo de muebles. Para darle un toque de plataformas debe tener mesas, estanterías o sillas por las que se pueda subir. Para que parezca que cambia de habitación debe tener secciones de puertas, paredes, suelo etc. Posibles habitaciones a recrear podrían ser: salón, dormitorio, cocina, cuarto de baño. Para hacer más largo el nivel podríamos repetir elementos incluso si se repiten estilos de habitaciones (aunque con distinta distribución).
+	\item \emph{El barrio residencial}: es un barrio apacible, retrataremos el típico barrio residencial de clase alta americano como el visto en series del tipo \emph{Desperate Housewives}. La apariencia lujosa del entorno se ve trastocada por la destrucción. Representaremos casas rotas (en varios colores para aprovechar el arte) y coches volcados (también de varios colores). Como elemento plataformero tendremos vallas, camiones o coches. Se deberían crear árboles, buzones, piscinas etc.
+	\item \emph{Niveles adicionales}: no desarrollaremos arte para que la comunidad pueda crear nuevos escenarios por motivos de tiempo. No obstante, se pueden reutilizar los ya creados para nuevos niveles.
+\end{itemize}
+
+\subsubsection{Menú y escenas}
+\begin{itemize}
+	\item \emph{Menú principal}: necesitamos un logo que haga las veces de banner principal, un fondo que represente a la abuela en acción con varios enemigos y una tipografía sangrienta para las opciones del menú.
+	\item \emph{Créditos}: podríamos representar otra escena de combate de la abuela aunque si no hay tiempo se puede reutilizar la del menú. Es posible utilizar la misma tipografía aunque a un tamaño menor.
+	\item \emph{Escena narrativa}: el fondo de las escenas narrativas variará según el fragmento que se esté contando. El fragmento que presenta el primer nivel podría ser la abuela sorprendida por zombies en el salón de su casa. En el posterior podría verse el momento de salir a la calle. La tipografía en este caso debe ser más sencilla ya que se presentará más cantidad de texto y debe ser cómodo de leer para el jugador.
+\end{itemize}
+
+\subsubsection{HUD}
+El HUD o \emph{Head-up display} representa los datos que ve el jugador sobre su personaje en pantalla. Debemos tener indicadores para la engergía restante y los puntos acumulados.
+
+\subsection{Sonido}
+
+\subsubsection{Banda sonora}
+\begin{itemize}
+	\item \emph{Menús}
+	\item \emph{La casa de la abuelita}
+	\item \emph{El barrio residencial}
+	\item \emph{Escena Game Over}: derrota
+	\item \emph{Escena final}: victoria
+\end{itemize}
+
+\subsubsection{Efectos de sonido}
+\begin{itemize}
+	\item \emph{Golpe de bastón}
+	\item \emph{Abuela golpeada}
+	\item \emph{Disparo de escopeta}
+	\item \emph{Zombie génerico golpeado}
+	\item \emph{Perro asesino golpeado}
+	\item \emph{Zombie gordo golpeado}
+	\item \emph{Zombie gordo vomitando}
+	\item \emph{Dentadura postiza recogida}
+	\item \emph{Pastillas para la tensión recogidas}
+	\item \emph{Munición recogida}: sonido de recarga de arma
+	\item \emph{Moverse por opciones de menú}: tipo `click'
+	\item \emph{Opción de menú seleccionada}
+	\item \emph{Narrador de escenas}: voz en off leyendo los textos y con algún efecto de distorsión.
+\end{itemize}
+
+\end{document}

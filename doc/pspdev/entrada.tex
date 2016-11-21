@@ -1,0 +1,20 @@
+Teóricamente, como la mayoría de tutoriales apuntan, podemos usar
+$SDL\_Joystick$ para manejar la entrada del jugador. Se nos presenta una equivalencia
+entre botones de joystick y de PSP para que podamos manejarla pero lo cierto
+es que, o soy tremendamente torpe, o este sistema no funciona del todo bien.\\
+
+Finalmente, para $Granny's bloodbath$ decidí cambiar la implementación 
+de la clase que manejaba la entrada del jugador (utilizando la API de las librerías de PSP) 
+sin cambiar su interfaz, de ese modo me adaptaba a las circunstancias de PSP sin
+afectar al resto del sistema.\\
+
+Las clases que utilicé son las siguientes y funcionan bastante bien:\\
+
+\textbf{keyboard.h}:
+
+\lstinputlisting[style = C++]{keyboard.h}
+
+\textbf{keyboard.cpp}:
+
+\lstinputlisting[style = C++]{keyboard.cpp}
+

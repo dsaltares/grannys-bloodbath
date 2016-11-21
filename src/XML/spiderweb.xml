@@ -1,0 +1,14 @@
+<bullet imagecode="tela" vx="10" vy="0" force="4">
+	<animations>
+		<animation name="normal" frames="0" delay="1"/>
+		<animation name="erase" frames="0" delay="1"/>
+	</animations>
+	<collisions>
+		<collision state="normal" x="1" y="10" w="33" h="27"/>
+		<collision state="erase" x="1" y="10" w="33" h="27"/>
+	</collisions>
+	<dimensions>
+		<dimension state="normal" x="1" y="10" w="33" h="27"/>
+		<dimension state="erase" x="1" y="10" w="33" h="27"/>
+	</dimensions>
+</bullet>

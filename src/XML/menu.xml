@@ -1,0 +1,7 @@
+<menu background = "codigofondo" music="empire" cursor="codigocursor" font="matter" move="reload" select="disparo">
+	<options>	
+		<option r="0" g="255" b="0" r2="255" g2="0" b2="0" x="747" y="148" text="Jugar"/>	
+		<option r="0" g="255" b="0" r2="255" g2="0" b2="0" x="709" y="222" text="Creditos"/>
+		<option r="0" g="255" b="0" r2="255" g2="0" b2="0" x="747" y="298" text="Salir"/>	
+	</options>
+</menu>

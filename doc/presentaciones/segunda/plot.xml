@@ -1,0 +1,6 @@
+<scenes>
+	<scene type="story" path="introduction.xml"/>
+	<scene type="level" path="level1.tmx"/>
+	<scene type="story" path="battle.xml"/>
+	<scene type="level" path="level2.tmx"/>
+</scenes>

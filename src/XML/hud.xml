@@ -1,0 +1,6 @@
+<hud>
+	<image code="hud" x="10" y="0"/>
+	<progressbar path="multimedia/bar.png" x="85" y="52" w="0" h="0"/>
+	<font code="hand" r="255" g="255" b="255" />
+	<information lifesx="141" lifesy="17" pointsx="241" pointsy="17" munitionx="341" munitiony="17"/>
+</hud>

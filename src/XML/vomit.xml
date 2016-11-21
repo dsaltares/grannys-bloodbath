@@ -1,0 +1,14 @@
+<bullet imagecode="vomito" vx="10" vy="0" force="2">
+	<animations>
+		<animation name="normal" frames="0" delay="1"/>
+		<animation name="erase" frames="0" delay="1"/>
+	</animations>
+	<collisions>
+		<collision state="normal" x="0" y="0" w="50" h="37"/>
+		<collision state="erase" x="0" y="0" w="50" h="37"/>
+	</collisions>
+	<dimensions>
+		<dimension state="normal" x="0" y="0" w="50" h="37"/>
+		<dimension state="erase" x="0" y="0" w="50" h="37"/>
+	</dimensions>
+</bullet>

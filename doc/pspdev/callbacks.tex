@@ -1,0 +1,18 @@
+Seguramente sabréis de qué hablo pero es probable que no os hayáis dado
+cuenta de que debe ser algo a controlar a la hora de portar la aplicación
+a PSP. Me refiero a la pausa del juego y a la vuelta al sistema operativo
+de la consola. En cualquier momento podemos pulsar el botón $HOME$, seleccionar
+`salir del juego' y volver al menú principal. Si no tenemos cuidado
+provocaremos un cuelgue en la consola cada vez que queramos salir.\\
+
+Tendremos que definir ciertas funciones que actúen como $callbacks$. Un fichero
+$main.cpp$ de un port génerico podría ser el siguiente:
+
+\lstinputlisting[style = C++]{main.cpp}
+
+Es importante comprender que cuando el usuario decide salir del juego
+(esperemos que no sea demasiado a menudo) se llama a la función
+$exit\_callback$ por lo que debe ser ella la que se encargue de hacer
+los cambios pertinentes para romper el game-loop. En mi caso una forma
+podía ser llamar a la al método $set\_quit()$ de mi clase $keyboard$ pero
+en el vuestro puede ser cualquier otro.

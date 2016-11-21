@@ -1,0 +1,5 @@
+<scenes>
+	<scene type="story" path="./XML/intro.xml" />
+	<scene type="level" path="./XML/level1.tmx" />
+	<scene type="level" path="./XML/minivel.tmx" />
+</scenes>

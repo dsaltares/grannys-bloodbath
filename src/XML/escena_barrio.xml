@@ -1,0 +1,10 @@
+<story>
+	<image code="escena-barrio"/>
+	<music code="barrio"/>
+	<text code="hand" r="255" g="255" b="255" x="700" y="110" w="260" h="500">		
+		Cuando la abuelita sale al exterior lo único que ve es destrucción.
+		El barrio apacible en el que una vez vivió había cambiado para siempre
+		y aquellas abominables criaturas debían pagar por ello. El siguiente
+		paso era acudir al hogar del pensionista a buscar refugio.
+	</text>
+</story>

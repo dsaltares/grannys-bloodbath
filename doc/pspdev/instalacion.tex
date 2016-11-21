@@ -1,0 +1,64 @@
+Lo primero que debemos hacer es instalar las dependencias del kit de
+desarrollo de PSP. Para ello abriremos una terminal e introduciremos
+el siguiente comando:
+
+\lstinputlisting[style = consola]{dependencias.sh}
+
+Ahora debemos establecer algunas variables de entorno para que el sistema
+sepa dónde encontrar las nuevas librerías de PSP a la hora de compilar.
+Editamos el fichero \emph{~/.bashrc} y añadimos al final las siguientes
+líneas:
+
+\lstinputlisting[style = consola]{bash.sh}
+
+Cuando reiniciemos el fichero \emph{~/.bashrc} volverá a cargarse pero no
+es necesario hacerlo, podemos ejecutar el siguiente comando:
+
+\lstinputlisting[style = consola]{recarga.sh}
+
+El siguiente paso es descargarnos una copia del directorio \emph{trunk}
+del repositorio de \href{http://ps2dev.org}{ps2dev}, el cual contiene todo
+lo que necesitamos (y más). El repositorio tiene un tamaño considerable
+y, dependiendo de cómo ande el servidor, puede tardar bastante.
+
+\lstinputlisting[style = consola]{ps2dev.sh}
+
+Bueno, si habéis tenido la paciencia suficiente de llegar hasta aquí vamos
+por buen camino. Ahora toca instalar el \emph{toolchain}, el kit básico:
+
+\lstinputlisting[style = consola]{toolchain.sh}
+
+Existe un pack de bibliotecas adicionales entre las que se encuentran las
+SDL llamado \emph{psplibraries}. Este pack contiene: bzip2, freetype, jpeg,
+libbulletml, libmad, libmikmod, libogg, libpng, libpspvram, libTremor,
+libvorbis, lua, pspgl, pspirkeyb, SDL, SDL\_gfx, SDL\_image, SDL\_mixer,
+SDL\_ttf, smpeg-psp, sqlite, zlib y zziplib. Muchas son dependencias de las
+SDL pero algunas como sqlite (bases de datos), lua (lenguaje de scripting) 
+o pspgl (versión de Open GL para PSP) no tienen nada que ver aunque son muy
+interesantes también. Lo instalamos de la siguiente manera:
+ 
+\lstinputlisting[style = consola]{psplibraries.sh}
+
+En teoría ya deberíamos estar listos para crear nuestros proyectos en C++
+que usen las SDL para PSP, ¡pero no es así! Debe haber algún error en el
+script anterior porque SDL\_mixer no se instala como debería. Hemos de
+compilar e instalar sus dependencias manualmente. Comenzamos cambiando
+el propietario de la carpeta donde se instala el kit de desarrollo, sino
+las librerias no pueden instalarse (al menos yo no he conseguido hacerlo):
+
+\lstinputlisting[style = consola]{permisos.sh}
+
+Donde \emph{group} y \emph{username} son los nombres de nuestro grupo y 
+usuario en el sistema.\\
+
+Nos dirigimos a instalar libTremor manualmente, dependencia de SDL\_mixer:
+
+\lstinputlisting[style = consola]{libtremor.sh}
+
+Finalmente le toca el turno a SDL\_mixer y toca seguir el siguiente proceso:
+
+\lstinputlisting[style = consola]{sdlmixer.sh}
+
+Con eso debería bastar, siento el rodeo, si alguien encuentra una manera
+mejor de instalar el kit de desarrollo para PSP con SDL en GNU/Linux, por
+favor, que me lo comunique. Entre todos podemos hacer una gran guía.

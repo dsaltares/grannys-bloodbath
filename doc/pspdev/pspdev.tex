@@ -1,0 +1,56 @@
+\documentclass[titlepage]{article}
+
+\usepackage{./estilos/estiloBase} % Basicamente son todas las
+                                  % librerias usadas. En caso de que
+                                  % falten librerias se van añadiendo
+                                  % al fichero.
+\usepackage{./estilos/colores}  % Algunos colores ya generados, para
+                                % los algunos estilos más avanzados.
+\usepackage{./estilos/comandos} % Algunos comandos personalizados
+
+\setlength{\unitlength}{1 cm} %Especificar unidad de trabajo
+
+\begin{document}
+
+% ------- %
+% PORTADA %
+% ------- %
+
+\thispagestyle{empty}
+\begin{picture}(0,0)
+\put(-0.3,-3){\includegraphics[scale=0.7]{portpsp.png}}
+\end{picture}\\[4cm]
+
+\begin{center}
+\textbf{{\Huge Desarrollo de videojuegos para PSP con C++ y SDL}}\\[5cm]
+{\large David Saltares Márquez}\\[5cm]
+Este documento posee una licencia \href{http://creativecommons.org/licenses/by-sa/3.0/es/}{Creative Commons (by-sa)}\\[1cm]
+\includegraphics[scale=1]{cc.png}
+\end{center}
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+\input{introduccion.tex}
+
+\section{Instalación}
+\input{instalacion.tex}
+
+\section{El makefile}
+\input{makefile.tex}
+
+\section{Callbacks de salida al SO}
+\input{callbacks.tex}
+
+\section{La pantalla}
+\input{pantalla.tex}
+
+\section{Leyendo la entrada de PSP}
+\input{entrada.tex}
+
+\section{Conclusiones}
+\input{conclusiones.tex}
+
+\end{document}

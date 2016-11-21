@@ -1,0 +1,96 @@
+\documentclass[titlepage]{article}
+
+\usepackage{./estilos/estiloBase} % Basicamente son todas las
+                                  % librerias usadas. En caso de que
+                                  % falten librerias se van añadiendo
+                                  % al fichero.
+\usepackage{./estilos/colores}  % Algunos colores ya generados, para
+                                % los algunos estilos más avanzados.
+\usepackage{./estilos/comandos} % Algunos comandos personalizados
+
+\author{Manuel de la Calle Brihuega\\Jose Marente Florín\\David Saltares Márquez}
+\title{Granny's Bloodbath\\Manual de usuario}
+
+% Portada
+% Índice
+% Introducción
+% Descarga e instalación
+% Requisitos mínimos
+% Historia y personajes
+% Pantallas
+% Jugar
+% Creación de niveles
+% Créditos
+% Licencia
+% Contacto y soporte
+
+\setlength{\unitlength}{1 cm} %Especificar unidad de trabajo
+
+\begin{document}
+
+% ------- %
+% PORTADA %
+% ------- %
+
+\thispagestyle{empty}
+\begin{picture}(18,4)
+\put(-2.1,0){\includegraphics[scale=0.6]{portada.png}}
+\end{picture}\\[4cm]
+
+\begin{center}
+\textbf{{\Huge Manual de usuario}}\\[1cm]
+\textbf{{\large v0.1 BETA}}\\[4cm]
+{\large David Saltares Márquez}\\
+{\large Jose Marente Florín}\\
+{\large Manuel de la Calle Brihuega}\\[2.2cm]
+Este documento posee una licencia GPL 3
+\end{center}
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+\input{introduccion.tex}
+
+\clearpage
+
+\section{Requisitos mínimos}
+\input{requisitos.tex}
+
+\clearpage
+
+\section{Descarga e instalación}
+\input{instalacion.tex}
+
+\clearpage
+
+\section{Historia y personajes}
+\input{historia.tex}
+
+\clearpage
+
+\section{Jugar}
+\input{jugar.tex}
+
+\clearpage
+
+\section{Creación de niveles}
+\input{niveles.tex}
+
+\clearpage
+
+\section{Contacto y soporte}
+\input{contacto.tex}
+
+\clearpage
+\section{Créditos}
+\input{creditos.tex}
+
+\clearpage
+
+\section{Licencia}
+\input{licencia.tex}
+
+\end{document}
+

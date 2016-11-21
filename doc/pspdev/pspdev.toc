@@ -1,0 +1,8 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}
+\contentsline {section}{\numberline {2}Instalaci\IeC {\'o}n}{3}{section.2}
+\contentsline {section}{\numberline {3}El makefile}{5}{section.3}
+\contentsline {section}{\numberline {4}Callbacks de salida al SO}{6}{section.4}
+\contentsline {section}{\numberline {5}La pantalla}{7}{section.5}
+\contentsline {section}{\numberline {6}Leyendo la entrada de PSP}{8}{section.6}
+\contentsline {section}{\numberline {7}Conclusiones}{11}{section.7}

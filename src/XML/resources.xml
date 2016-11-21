@@ -1,0 +1,59 @@
+<resources>
+	<images>
+		<image code="granny" path="multimedia/granny.png" rows="8" columns="12"/>
+		<image code="zombie" path="multimedia/zombie.png" rows="8" columns="10"/>
+		<image code="dog" path="multimedia/perro.png" rows="7" columns="5"/>
+		<image code="spider" path="multimedia/spider.png" rows="11" columns="6"/>
+		<image code="gordo" path="multimedia/gordo.png" rows="7" columns="15" />
+		<image code="boss" path="multimedia/boss.png" rows="8" columns="10" />
+		<image code="hud" path="multimedia/hud.png" rows="1" columns="1"/>
+		<image code="pills" path="multimedia/pastillas.png" rows="1" columns="10" />
+		<image code="teeth" path="multimedia/dentadura.png" rows="1" columns="10" />
+		<image code="ammo" path="multimedia/municion.png" rows="1" columns="10" />
+		<image code="codigofondo" path="multimedia/fondo-menu.png" rows="1" columns="1"/>
+		<image code="codigocursor" path="multimedia/cursor-menu.png" rows="1" columns="1"/>
+		<image code="intro" path="multimedia/fondo-intro.png" rows="1" columns="1" />
+		<image code="escena-barrio" path="multimedia/escena-barrio.png" rows="1" columns="1" />
+		<image code="escena-final" path="multimedia/escena-final.png" rows="1" columns="1" />
+		<image code="escena-boss" path="multimedia/escena-boss.png" rows="1" columns="1" />
+		<image code="gameover" path="multimedia/gameover.png" rows="1" columns="1" />
+		<image code="creditos" path="multimedia/creditos.png" rows="1" columns="1" />
+		<image code="bullet" path="multimedia/bullet.png" rows="1" columns="1" />		
+		<image code="vomito" path="multimedia/vomito.png" rows="1" columns="1" />
+		<image code="tela" path="multimedia/tela-arana.png" rows="1" columns="1" />
+		<image code="gargajo" path="multimedia/gargajo.png" rows="1" columns="1" />
+	</images>
+	<fonts>
+		<font code="hand" path="multimedia/handsean.ttf" size="20"/>
+		<font code="matter" path="multimedia/matteroffact.ttf" size="40"/>
+	</fonts>
+	<musics>
+		<music code="empire" path="multimedia/here_comes_the_8_t_Empire.ogg"/>
+		<music code="final" path="multimedia/the_final_end.ogg"/>
+		<music code="acn" path="multimedia/acn_8bi_fremito.ogg"/>
+		<music code="waterski" path="multimedia/waterski_me.ogg"/>
+		<music code="jump-rope" path="multimedia/i_like_jump_rope.ogg"/>
+		<music code="intro" path="multimedia/intro_Narrador.ogg" />
+		<music code="barrio" path="multimedia/nivel2_narrador.ogg" />
+		<music code="narrador-boss" path="multimedia/escena_boss_narrador.ogg" />
+		<music code="narrador-fin" path="multimedia/fin_narrador.ogg" />
+	</musics>
+	<sounds>
+		<sound code="reload" path="multimedia/reload.wav"/>
+		<sound code="disparo" path="multimedia/disparo_escopeta.wav"/>
+		<sound code="salto" path="multimedia/jump.wav"/>
+		<sound code="bastonazo" path="multimedia/bastonazo.wav" />
+		<sound code="juventud" path="multimedia/juventud.wav" />
+		<sound code="malita" path="multimedia/malita.wav" />
+		<sound code="mayores" path="multimedia/mayores.wav" />
+		<sound code="siento" path="multimedia/siento.wav" />
+		<sound code="vomit" path="multimedia/vomito.wav" />
+		<sound code="gargajo" path="multimedia/gargajo.wav" />	
+		<sound code="spiderweb" path="multimedia/spiderweb.wav" />	
+		<sound code="hurt_fat" path="multimedia/gordo_hurt.wav" />
+		<sound code="hurt_zombie" path="multimedia/zombie_hurt.wav" />
+		<sound code="hurt_dog" path="multimedia/dog_hurt.wav" />
+		<sound code="hurt_boss" path="multimedia/boss_hurt.wav" />
+	</sounds>
+</resources>
+

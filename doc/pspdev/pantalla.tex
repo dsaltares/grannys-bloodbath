@@ -1,0 +1,13 @@
+Las dimensiones de la pantalla de la PSP son de 480x272 píxeles por lo que
+la superficie principal de SDL a crear debe ser exactamente de dichas dimensiones.
+Por otro lado está la profundidad de color, inicialmente pensé que sería más
+eficiente bajar dichos niveles de 32bpp a 16bpp o incluso 8bpp si fuera necesario
+por cuestiones de rendimiento. No obstante, el port de SDL para PSP
+parece no funcionar correctamente en los dos últimos modos. Finalmente acabé
+usando 32bpp aunque el rendimiento final es bastante bueno.\\
+
+La llamada para inicializar SDL en PSP puede ser algo similar a esto:
+
+\lstinputlisting[style = C++]{inicializar.cpp}
+
+Con las correspondientes comprobaciones posteriores.

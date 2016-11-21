@@ -1,0 +1,4 @@
+<configuracion>
+	<pantalla ancho="960" alto="544" bpp="32"/>
+	<fps valor="30"/>
+</configuracion>

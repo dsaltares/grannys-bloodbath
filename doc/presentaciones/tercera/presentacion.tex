@@ -1,0 +1,288 @@
+
+\documentclass{beamer}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphics}
+\usepackage{listings}
+
+\usetheme{Berkeley}
+
+\title{Granny's Bloodbath\\Tercera presentación}
+\author{Manuel De la Calle\\Jose Marente\\David Saltares}
+\date{Mayo de 2010}
+
+\useinnertheme[hoptionsi]{rounded}
+
+\setbeamertemplate{sidebar right}
+{
+  \hbox to2cm{\hss\insertlogo\hss}
+}
+
+\logo{\includegraphics[width=1.2cm]{logo.png}}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\frametitle{Índice de contenidos}
+	\tableofcontents
+\end{frame}
+
+\section{Introducción}
+
+\begin{frame}
+	\frametitle{¿De qué va Granny's Bloodbath?}
+	
+	\begin{block}{Historia}
+	La protagonista es una abuelita octogenaria que vive plácidamente en su casita situada en una agradable zona residencial. 
+	Todo iba de maravilla hasta que se ve invadida por terribles zombis
+	\end{block}
+	
+	\pause
+	
+	\begin{block}{Mecánica}
+		\begin{itemize}
+			\item Plataformas de acción sorteando obstáculos y eliminando a todos los zombies que podamos
+			\item Munición y powerups (dentadura y pastillas para la tensión)
+			\item Ampliación de niveles por la comunidad
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Los personajes}
+	
+	\begin{itemize}[<+->]
+		\item La abuelita
+		\begin{center}
+			\includegraphics[scale=0.35]{abuela-movimientos.png}
+		\end{center}
+		\item Los enemigos
+		\begin{center}
+			\includegraphics[scale=0.4]{enemigos.png}
+		\end{center}
+		\item Los ítems
+		\begin{center}
+			\includegraphics[scale=0.4]{items.png}
+		\end{center}
+	\end{itemize}
+\end{frame}
+
+\section{Estado del proyecto}
+
+\begin{frame}
+	\frametitle{¿Cómo va la cosa?}
+
+	\includegraphics[scale=0.09]{planificacion.png}
+
+	\begin{block}{Una valoración}
+		\begin{itemize}
+			\item Avanzamos según lo previsto
+			\item Pequeños cambios en la precedencia de las tareas
+		\end{itemize}
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{El port a PSP}
+	
+	\begin{center}
+		\includegraphics[scale=0.20]{psp.png}
+	\end{center}
+	\begin{block}{Los motivos...}
+		\begin{itemize}
+			\item Es posible hacer aplicaciones portables PC - PSP con SDL
+			\item Sólo tenemos que escalar los gráficos
+			\item Los cambios en el código son mínimos
+			\item Un estilo de juego que encaja con la consola
+			\item El proyecto gana atractivo
+		\end{itemize}
+	\end{block}
+	
+	Eso sí, habrá que cuidar el rendimiento.
+\end{frame}
+
+\section{BETA}
+
+\begin{frame}
+	\frametitle{Primera BETA De Granny's Bloodbath}
+	
+	\begin{center}
+		% Captura de la cara de la abuelita
+		\includegraphics[scale=0.3]{abuela-cara.png}
+		
+		\textbf{¡¡La gente quiere ver a la abuelita repartiendo leña!!}\\
+		
+		Echémosle un vistazo a la BETA.
+	\end{center}
+	
+	Esperemos que funcione...
+\end{frame}
+
+\section{Calidad del código}
+
+\begin{frame}
+	\frametitle{Documentación con Doxygen}
+	
+	\begin{center}
+		\includegraphics[scale=0.75]{doxygen.png}
+	\end{center}
+	
+	\begin{block}{El trabajo en equipo}
+		\begin{itemize}
+			\item Primero diseñamos el sistema
+			\item Íbamos implementando nuestra parte
+			\item Al existir una interfaz bien definida, todo encaja
+		\end{itemize}
+	\end{block}
+	
+	Veamos un ejemplo a través de la documentación.
+\end{frame}
+
+\section{Problemas}
+
+\begin{frame}
+	\frametitle{Las colisiones, el mayor obstáculo}
+	
+	\begin{block}{Hemos tenido que tener en cuenta}
+		\begin{itemize}
+			\item Es un juego de plataformas, la detección de colisiones debe ser precisa
+			\item Los personajes varían su superficie según su estado (andando, agachados...)
+			\item Los elementos del escenario pueden ser atravesables, no atravesables o plataformas
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Solución}
+	
+	\begin{block}{Detección de colisiones}
+		\begin{itemize}
+			\item Los personajes tienen cajas que identifican sus zonas colisionables
+			
+			\begin{center}
+				\includegraphics[scale=0.4]{colisiones-1.png}
+			\end{center}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Solución}
+	
+	\begin{block}{Detección de colisiones}
+		\begin{itemize}
+			\item Movemos al personaje (¡pero no lo dibujamos en pantalla aún!)
+			
+			\begin{center}
+				\includegraphics[scale=0.4]{colisiones-2.png}
+			\end{center}
+			
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Solución}
+	
+	\begin{block}{Detección de colisiones}
+		\begin{itemize}
+			\item Comprobamos que ha colisionado y corregimos su posición
+			
+			\begin{center}
+				\includegraphics[scale=0.4]{colisiones-3.png}
+			\end{center}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{IA}
+
+\begin{frame}
+	\frametitle{Autómata de IA para el Zombie Gordo}
+	
+	\begin{center}
+		\textbf{La escasa inteligencia de los zombies juega a nuestro favor}
+	\end{center}
+	
+	\includegraphics[scale=0.20]{ia-gordo.png}
+\end{frame}
+
+\section{Estadísticas}
+
+\begin{frame}
+	\frametitle{StatSVN}
+	
+	\begin{center}
+		\includegraphics[scale=0.5]{statsvn.png}
+	\end{center}
+	
+	\begin{center}
+		\textbf{No se puede engañar a las estadísticas de nuestro trabajo.\\}
+	\end{center}
+	
+	Veamos las estadísticas sobre la Web.
+	
+\end{frame}
+
+\section{Colaboración}
+
+\begin{frame}
+	\frametitle{Toda ayuda será bienvenida}
+	
+	\begin{center}
+		\includegraphics[scale=0.2]{colaboradores.jpg}
+	\end{center}
+	
+	\begin{block}{Buscamos...}
+		\begin{itemize}
+			\item Diseñadores de niveles
+			\item Grafistas
+			\item Músicos
+			\item Guionistas
+		\end{itemize}
+	\end{block}
+	
+	Podéis contactar a través de nuestro blog:\\
+	
+	\begin{center}
+		\textbf{http://grannysbloodbath.wordpress.com}
+	\end{center}
+	
+\end{frame}
+
+\section{Bibliografía}
+
+\begin{frame}
+	\frametitle{Bibliografía}
+	
+	\begin{block}{Hemos utilizado:}
+		\begin{itemize}
+			\item \href{http://softwarelibre.uca.es/wikijuegos}{Wiki SDL}
+			\item \href{http://jnrdev.72dpiarmy.com/en/jnrdev1/}{Tutorial de detección de colisiones en mapas basados en tiles}
+			\item Game Programming Gems
+			\item Design Patterns - Elements of Reusable Object-Oriented Software
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Conclusión}
+
+\begin{frame}
+	\frametitle{Conclusión}
+	
+	\begin{center}
+		Vamos a un buen ritmo pero aún nos queda mucho trabajo...
+	\end{center}
+	
+	\begin{center}
+		\huge{\textbf{¡Muchas gracias por vuestra atención!}}
+	\end{center}
+\end{frame}
+
+\end{document}

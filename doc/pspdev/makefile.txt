@@ -1,0 +1,41 @@
+#Proyecto
+TARGET = Nombre del proyecto
+SDL_CONFIG = $(PSPBIN)/sdl-config
+
+# Rutas
+MOTOR_DIR := engine
+
+# Ficheros fuente del juego
+SRC := main.cpp
+
+# Ficheros fuente del motor.
+SRC_MOTOR := ficheros.o del motor
+
+# motor_dir + fuentes
+SRC_DIR_MOTOR := $(foreach src, $(SRC_MOTOR),$(MOTOR_DIR)/$(src) )
+
+# Objetos
+OBJS := $(SRC:%.cpp=%.o) $(SRC_DIR_MOTOR:%.cpp=%.o)
+
+INCDIR =
+CFLAGS = $(shell $(SDL_CONFIG) --cflags) -G0 -Wall -O2 -DPSP
+CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti -D"TIXML_USE_STL"
+ASFLAGS = $(CFLAGS)
+
+LIBDIR =
+LDFLAGS =
+LIBS = -lstdc++ -lsupc++ -lSDL_gfx -lSDL_image -lSDL_mixer -lSDL_ttf -lfreetype \
+	-lpng -ljpeg -lvorbisidec -lz -lm $(shell $(SDL_CONFIG) --libs)
+
+
+EXTRA_TARGETS = EBOOT.PBP
+PSP_EBOOT_TITLE = Nombre del proyecto
+PSP_EBOOT_ICON= "icono.png"
+PSP_EBOOT_PIC1= "fondo.png"
+PSP_EBOOT_SND0= "sonido.at3"
+
+
+PSPSDK = $(shell psp-config --pspsdk-path)
+PSPBIN = $(shell psp-config --psp-prefix)/bin
+USE_PSPSDK_LIBC=1
+include $(PSPSDK)/lib/build.mak

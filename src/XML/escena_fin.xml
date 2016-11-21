@@ -1,0 +1,8 @@
+<story>
+	<image code="escena-final"/>
+	<music code="narrador-fin"/>
+	<text code="hand" r="255" g="255" b="255" x="80" y="200" w="320" h="500">		
+		Tras haber derrotado a su archienemigo, la abuelita 
+		vislumbra un rayo de esperanza, ¿sobrevivirá al apocalipsis?
+	</text>
+</story>

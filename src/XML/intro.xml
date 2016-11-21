@@ -1,0 +1,12 @@
+<story>
+	<image code="intro"/>
+	<music code="intro"/>
+	<text code="hand" r="1" g="1" b="1" x="510" y="110" w="430" h="400">		
+		La abuelita vivía tranquilamente en una casita de un barrio residencial. 
+		Era una zona apacible, tranquila, por eso la eligió para disfrutar de su 
+		merecida jubilación. De pronto, su descanso se ve interrumpido por... 
+		¡Una invasión Zombie! Están por todas partes, no hay tiempo, debe coger 
+		la escopeta de caza de su difunto marido, salir en bata y luchar por su vida. 
+		¡¡Arrastrará a todos los que pueda con ella al infierno!!
+	</text>
+</story>

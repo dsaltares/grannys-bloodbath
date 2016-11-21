@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="30" height="17" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="ammo" value="413"/>
+  <property name="boss" value="435"/>
+  <property name="collision_map" value="../multimedia/collision_map.png"/>
+  <property name="dog" value="389"/>
+  <property name="fat" value="390"/>
+  <property name="music" value="acn"/>
+  <property name="pills" value="412"/>
+  <property name="spider" value="434"/>
+  <property name="teeth" value="411"/>
+  <property name="tileset_alto" value="19"/>
+  <property name="tileset_ancho" value="23"/>
+  <property name="zombie" value="388"/>
+ </properties>
+ <tileset name="tileset" firstgid="1" tilewidth="32" tileheight="32">
+  <image source="../multimedia/tileset-casa.png"/>
+ </tileset>
+ <layer name="Fondo" width="30" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkbBSAEAsQZjl/gHAAA=
+  </data>
+ </layer>
+ <layer name="Muebles" width="30" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkbBSAEAsQZjl/gHAAA=
+  </data>
+ </layer>
+ <layer name="Marco de puerta" width="30" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkbBSAEAsQZjl/gHAAA=
+  </data>
+ </layer>
+ <layer name="Enemigos" width="30" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkbBSAEAsQZjl/gHAAA=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,61 @@
+%---------COMANDOS--------------------------------
+
+%-------- Estilos definidos ----------------------
+\newcommand{\programa}[1]{\textit{#1}}
+\newcommand{\comando}[1]{\texttt{#1}}
+\newcommand{\negrita}[1]{\textbf{#1}}
+\newcommand{\subrayado}[1]{\underline{#1}}
+%-------------------------------------------------
+
+%---------Definicion------------------------------
+\newtheorem{defin}{Definición}[section]
+%-------------------------------------------------
+
+%---------Listing---------------------------------
+%-- Formato de los listados de código
+\lstset{ frame=Ltb,
+     framerule=0pt,
+     boxpos=c,
+     aboveskip=0.5cm,
+     linewidth=16cm,
+     framextopmargin=3pt,
+     framexbottommargin=3pt,
+     framexleftmargin=0.4cm,
+     framexrightmargin=-3cm,
+     framesep=0pt,
+     rulesep=.4pt,
+     backgroundcolor=\color{gray97},
+     rulesepcolor=\color{black},
+     %
+     stringstyle=\ttfamily\color{burdeos},
+     identifierstyle=,
+     showstringspaces = false,
+     basicstyle=\small\ttfamily,
+     commentstyle=\color{violeta},
+     keywordstyle=\bfseries,
+   }
+ 
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+
+% estilo de consola   
+\lstdefinestyle{consola}
+   {basicstyle=\scriptsize\bf\ttfamily,
+    backgroundcolor=\color{gray75},
+   }
+
+%estilo para C++
+\lstdefinestyle{C++}
+   {language=C++,
+     basicstyle=\scriptsize\bf\ttfamily,
+     tabsize=4,
+     %numbers=left,
+     %numbersep=15pt,
+     %numberstyle=\tiny,
+     %numberfirstline = false,
+     %breaklines=true,
+     %emptylines=2,
+   }
+
+

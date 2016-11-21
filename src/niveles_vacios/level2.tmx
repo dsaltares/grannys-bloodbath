@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="30" height="17" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="ammo" value="708"/>
+  <property name="boss" value="649"/>
+  <property name="collision_map" value="../multimedia/collision_map_2.png"/>
+  <property name="dog" value="766"/>
+  <property name="fat" value="825"/>
+  <property name="music" value="jump-rope"/>
+  <property name="pills" value="767"/>
+  <property name="spider" value="648"/>
+  <property name="teeth" value="826"/>
+  <property name="tileset_alto" value="35"/>
+  <property name="tileset_ancho" value="59"/>
+  <property name="zombie" value="707"/>
+ </properties>
+ <tileset name="tileset" firstgid="1" tilewidth="32" tileheight="32">
+  <image source="../multimedia/tileset-barrio.png"/>
+ </tileset>
+ <layer name="Fondo" width="30" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkbBSAEAsQZjl/gHAAA=
+  </data>
+ </layer>
+ <layer name="Objetos" width="30" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkbBSAEAsQZjl/gHAAA=
+  </data>
+ </layer>
+ <layer name="Cesped" width="30" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkbBSAEAsQZjl/gHAAA=
+  </data>
+ </layer>
+ <layer name="Enemigos" width="30" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkbBSAEAsQZjl/gHAAA=
+  </data>
+ </layer>
+</map>

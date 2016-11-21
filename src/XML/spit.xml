@@ -1,0 +1,14 @@
+<bullet imagecode="gargajo" vx="10" vy="0" force="2">
+	<animations>
+		<animation name="normal" frames="0" delay="1"/>
+		<animation name="erase" frames="0" delay="1"/>
+	</animations>
+	<collisions>
+		<collision state="normal" x="9" y="5" w="20" h="11"/>
+		<collision state="erase" x="9" y="5" w="20" h="11"/>
+	</collisions>
+	<dimensions>
+		<dimension state="normal"  x="9" y="5" w="20" h="11"/>
+		<dimension state="erase"  x="9" y="5" w="20" h="11"/>
+	</dimensions>
+</bullet>

@@ -1,0 +1,10 @@
+<scenes>
+	<scene type="level" path="./XML/level1.tmx" />
+	<scene type="story" path="./XML/intro.xml" />
+	
+	<scene type="story" path="./XML/escena_barrio.xml" />
+	<scene type="level" path="./XML/level2.tmx" />
+	<scene type="story" path="./XML/escena_boss.xml" />
+	<scene type="boss" path="./XML/boss.tmx" />
+	<scene type="story" path="./XML/escena_fin.xml" />
+</scenes>

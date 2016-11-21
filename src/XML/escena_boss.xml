@@ -1,0 +1,11 @@
+<story>
+	<image code="escena-boss"/>
+	<music code="narrador-boss"/>
+	<text code="hand" r="255" g="255" b="255" x="640" y="105" w="300" h="500">		
+		Al llegar al hogar del pensionista la abuela vio, horrorizada, que era 
+		demasiado tarde. Cuando parecía que nada podía ir peor, vio
+		a su archienemigo... ¡Aquel viejo que le robaba cada mañana el periódico!
+		¡Ahora era uno de ellos! La abuelita reunió toda su ira y se dispuso para
+		la batalla.
+	</text>
+</story>
